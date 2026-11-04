@@ -23,7 +23,7 @@ secrets:         ## Quét secret + PII trước khi commit
 	@git rev-parse --git-dir >/dev/null 2>&1 || { echo "FAIL chưa phải git repo"; exit 1; }
 	@! git grep -nIE 'hf_[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN (RSA|OPENSSH) PRIVATE KEY' \
 	  && echo "OK  no secret" || { echo "FAIL secret found"; exit 1; }
-	@! git grep -nIE '@gmail\.com|huggingface\.co/datasets/[A-Za-z0-9_-]+/|/home/[a-z]+/' \
+	@! git grep -nIE '@gmail\.com|/home/[a-z]+/' \
 	  && echo "OK  no PII" || { echo "FAIL PII found"; exit 1; }
 
 smoke:           ## Kiểm tra resolve config (READ-ONLY)

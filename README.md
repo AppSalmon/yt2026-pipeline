@@ -107,6 +107,29 @@ python3 crawler/discover_channels.py \
 **Checklist 10 điểm cần đổi** (trong đó chỉ **1 điểm phải sửa code**: charset
 filter) → [`docs/ADD_LANGUAGE.md`](docs/ADD_LANGUAGE.md).
 
+## Kết quả đã publish (mẫu tham chiếu)
+
+4 unit đầu tiên đã đi hết chuỗi **crawl → QC → đóng gói → upload → verify**. Xem
+link + số liệu thật để biết "đích đến" khi chạy pipeline cho ngôn ngữ của bạn.
+
+| Unit | HuggingFace (gated: manual) | Giờ | Audio files | GB (SI) | Kênh |
+|---|---|---|---|---|---|
+| `yt2026_batch01_10kh` | https://huggingface.co/datasets/SalmonAI123/yt2026_batch01_10kh | 11.911,8 | 20.468 | 624,3 | 307 |
+| `yt2026_batch02_10kh` | https://huggingface.co/datasets/SalmonAI123/yt2026_batch02_10kh | 11.884,0 | 17.754 | 624,7 | 320 |
+| `yt2026_batch03_10kh` | https://huggingface.co/datasets/SalmonAI123/yt2026_batch03_10kh | 13.204,7 | 36.088 | 683,4 | 702 |
+| `yt2026_batch04_10kh` | https://huggingface.co/datasets/SalmonAI123/yt2026_batch04_10kh | 12.148,5 | 20.678 | 638,7 | 436 |
+| **Tổng** | 4 unit | **49.149,0 h** | **94.988** | **2.571 GB ≈ 2,39 TiB** | — |
+
+- Số liệu lấy từ `corpus_ledger.jsonl` (chốt 2026-10-23) + HF tree API (2026-11-04).
+- Chỉ nhận video **đăng từ 2026-01-01** — kiểm được từng clip qua `upload_date`
+  trong `manifest.jsonl`; không trùng corpus phát hành trước 2026.
+- Dataset đặt **gated = manual** (phải bấm đồng ý trên trang HF mới tải được).
+- Mỗi unit gồm `manifest.jsonl`, `files.txt`, `stats.json`, `SHA256SUMS` + dataset
+  card do `metadata/make_hf_card.py` sinh — đúng cấu trúc pipeline của bạn sẽ tạo ra.
+- Audio giữ nguyên `.webm` (Opus 48 kHz mono, **không re-encode**), có `info.json`
+  gốc để truy vết `video_id` → `https://www.youtube.com/watch?v=<video_id>`.
+
+
 ## Cấu hình
 
 Mọi thứ đọc từ [`config.env`](config.env); biến môi trường ngoài **luôn** override.
