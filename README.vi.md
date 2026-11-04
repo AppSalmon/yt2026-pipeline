@@ -1,11 +1,17 @@
 > Mục lục tài liệu: xem [`docs/`](docs/) · Chạy cho ngôn ngữ khác: [`docs/ADD_LANGUAGE.md`](docs/ADD_LANGUAGE.md) · English: [`README.md`](README.md)
 
-# YouTube Speech Crawl Pipeline — audio-only acquisition cho corpus ASR
+# Xây corpus ASR 50.000 giờ từ YouTube
 
-Pipeline thu thập **audio nói tự nhiên từ YouTube** để xây corpus ASR theo ngôn ngữ,
-dựa trên cấu trúc [GigaSpeech2](https://github.com/SpeechColab/GigaSpeech2).
-Bản gốc dùng cho **tiếng Việt (code-switch Việt–Anh)**; toàn bộ phần ngôn ngữ đã
-được **parameter hoá** để chạy cho ngôn ngữ khác (Thái, Indonesia, Myanmar, Khmer…)
+**Đa ngôn ngữ · chỉ audio · kiểm toán được.** Thu audio nói tự nhiên từ YouTube rồi
+biến thành dataset ASR phát hành được: crawl → QC → đóng gói → verify → upload, có
+chống trùng và sổ cái verify checksum xuyên suốt.
+
+> **Đã publish 49.149 giờ** — 94.988 clip · 2.571 GB (≈2,39 TiB) · 4 dataset
+> HuggingFace gated. Số liệu + link ở mục **Kết quả đã publish** bên dưới.
+
+Xây trên nền [GigaSpeech2](https://github.com/SpeechColab/GigaSpeech2). Bản gốc dùng
+cho **tiếng Việt (code-switch Việt–Anh)**; toàn bộ phần ngôn ngữ đã được
+**parameter hoá** để chạy cho ngôn ngữ khác (Thái, Indonesia, Myanmar, Khmer…)
 chỉ bằng vài biến môi trường.
 
 > **Ghi chú:** project cá nhân, viết ngoài giờ làm việc — không liên quan đến

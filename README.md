@@ -1,13 +1,19 @@
 > Docs index: [`docs/`](docs/) · Another language: [`docs/ADD_LANGUAGE.md`](docs/ADD_LANGUAGE.md) · Tiếng Việt: [`README.vi.md`](README.vi.md)
 
-# YouTube Speech Crawl Pipeline — audio-only acquisition for ASR corpora
+# Build a 50,000-Hour ASR Corpus from YouTube
 
-A pipeline that harvests **spontaneous speech from YouTube** to build
-per-language ASR corpora, structurally derived from
-[GigaSpeech2](https://github.com/SpeechColab/GigaSpeech2).
-It was written for **Vietnamese (vi–en code-switch)**, but every
-language-specific part is now a configuration value, so the same code targets Thai,
-Indonesian, Burmese, Khmer… with a few environment variables.
+**Multilingual · audio-only · audit-ready.** Harvests spontaneous speech from
+YouTube and turns it into publishable ASR datasets: crawl → QC → package → verify
+→ upload, with dedup and a checksum-verified ledger end to end.
+
+> **49,149 hours already published** — 94,988 clips · 2,571 GB (≈2.39 TiB) ·
+> 4 gated HuggingFace datasets. Numbers and links in
+> [Published results](#published-results-reference-examples) below.
+
+Built on [GigaSpeech2](https://github.com/SpeechColab/GigaSpeech2). Originally
+written for **Vietnamese (vi–en code-switch)**; every language-specific part is now
+a configuration value, so the same code targets Thai, Indonesian, Burmese, Khmer…
+with a few environment variables.
 
 > **Note:** personal side project, built outside working hours — not affiliated
 > with any employer.
