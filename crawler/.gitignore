@@ -1,0 +1,14 @@
+# Secrets: NEVER commit cookies (chúng xác thực một tài khoản Google thật).
+cookies.txt
+cookies/*.txt
+cookies/*.json
+!cookies/README.md
+
+# Log + state máy cục bộ của crawler (xem thêm .gitignore ở gốc repo)
+*.log
+nohup*.log
+log/*
+!log/.gitkeep
+
+# Archive chống trùng (audios_*.txt) và danh sách kênh là STATE của từng người:
+# file mẫu channels.example.txt ở lại trong repo, phần còn lại do .gitignore gốc chặn.

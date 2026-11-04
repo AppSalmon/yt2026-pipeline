@@ -1,0 +1,17 @@
+# Từ khoá discovery cho tiếng Việt (dùng cho crawler/discover_channels.py).
+# Mỗi dòng = 1 từ khoá, dòng '#' là comment.
+#
+# Quy ước thư mục: crawler/langs/<LANG_CODE>/keywords.txt
+#   -> thêm ngôn ngữ mới: tạo crawler/langs/<code>/keywords.txt rồi chạy
+#      python3 crawler/discover_channels.py --keywords-file crawler/langs/<code>/keywords.txt
+#
+# Gợi ý chọn từ khoá: ưu tiên nội dung HỘI THOẠI tự nhiên (podcast, talkshow,
+# phỏng vấn, call-in, vlog) thay vì đọc báo/đọc truyện — mục tiêu là speech ASR
+# thực tế, có ngữ cảnh nói tự do.
+
+podcast tiếng việt
+talkshow việt nam
+phỏng vấn việt nam
+react việt nam
+vlog tiếng việt
+trò chuyện tiếng việt

@@ -1,0 +1,37 @@
+# ============================================================================
+# requirements.txt — Python packages cho pipeline (crawl / QC / metadata).
+#
+# Cài:   pip install -r requirements.txt
+# Ghi chú:
+#   * fasttext 0.9.3 KHÔNG tương thích numpy>=2  => ghim numpy<2.
+#   * torch/torchaudio: dòng dưới là bản CPU. Có GPU thì cài theo
+#     https://pytorch.org/get-started/locally/ rồi bỏ 2 dòng torch* ở đây.
+#   * Bước force-alignment + transcribe rất nặng — xem docs/SETUP.md.
+# ============================================================================
+
+# --- Crawl ------------------------------------------------------------------
+yt-dlp>=2025.1.1
+
+# --- QC / metadata / LID ----------------------------------------------------
+fasttext==0.9.3
+numpy<2
+tqdm
+typing_extensions
+
+# --- Audio tooling (wrapper Python; binary ffmpeg/sox xem scripts/) ----------
+ffmpeg-python
+sox
+
+# --- Transcribe (bước convert) ----------------------------------------------
+faster-whisper>=1.0.0
+# openai-whisper        # thay thế faster-whisper nếu bạn muốn bản gốc (chậm hơn)
+
+# --- Forced alignment (bước align) ------------------------------------------
+torch>=2.1.0
+torchaudio>=2.1.0
+textgrid
+lhotse
+
+# --- Upload (bước sync) ------------------------------------------------------
+huggingface_hub<2
+hf_xet

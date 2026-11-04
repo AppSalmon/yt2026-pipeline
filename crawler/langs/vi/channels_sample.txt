@@ -1,0 +1,18 @@
+# channels_sample.txt — 12 kênh tiếng Việt THẬT đã dùng cho corpus yt2026 (mẫu tham khảo format).
+# Đây chỉ là mẫu để hình dung độ "sạch" của danh sách; đồng nghiệp crawl ngôn ngữ
+# khác hãy tạo danh sách riêng bằng crawler/discover_channels.py.
+#
+# Format: [tên kênh]<TAB>[handle hoặc channel id]
+
+Jenny Huynh	channel/UChpH1_IoKdakdZbynWXiHuw
+KENH14 SPECIAL	channel/UCKii76BlEdVwV1Lq-EJX_nw
+KẾT NỐI TRI THỨC VỚI CUỘC SỐNG 2018	channel/UC3iLZAeyKdlN7xkqP16gTCw
+Lâm Vlog	channel/UConnM5zwOP9vG_LPTYbRsAg
+NGUYÊN KHANG	channel/UCJ7QVo743-2wSsyxI_hxOXg
+PARIS TRÀ ĐÀM OFFICIAL - ĐÌNH ĐẠI	channel/UChyaqT2aCXMUjpk163PUpLg
+Panda Studio	channel/UCnXr9o-f4MXHdgq_QN3QFiw
+Quẹo channel	channel/UCnppiXRPGFG66BH6mKXa_sg
+RBT_Vietnam VN 🇻🇳	channel/UCL8HwsdDylOGbKQDvJzd5AQ
+SAM Channel	channel/UCaLbdvs8SLJDjuM8T9BRi1w
+SBTN Archives	channel/UCdDVY_U2rJsUMPC-A3nq39A
+Saigon Tếu	channel/UCqaQzGvnFzaEPFx-f326pog

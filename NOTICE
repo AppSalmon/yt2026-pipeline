@@ -1,0 +1,41 @@
+yt2026-pipeline
+Copyright 2026 yt2026-pipeline contributors
+
+This product includes software developed as part of the following projects:
+
+--------------------------------------------------------------------------------
+1) GigaSpeech2  (https://github.com/SpeechColab/GigaSpeech2)
+   Copyright SpeechColab / GigaSpeech2 contributors
+   Licensed under the Apache License, Version 2.0.
+
+   The following files were adapted from the GigaSpeech2 pipeline and are
+   redistributed here under the same license:
+       convert_transcribe/convert_and_transcribe.py   (adapted; --accept-langs
+           accepts a comma-separated language list instead of a single language)
+       crawler/download_from_youtube.sh               (based on
+           pipeline/crawler/download_from_youtube_channels.sh)
+       segmentation/filter_manifest.py                (adapted; charset filter,
+           upload-date filter and code-switch filter changed)
+       utils/force_alignment/*                        (copied from the upstream
+           pipeline: MMS CTC forced alignment helpers)
+       run_pipeline.sh                                (driver, adapted)
+
+--------------------------------------------------------------------------------
+2) uroman  (https://github.com/isi-nlp/uroman)
+   Copyright (C) 2015-2020 Ulf Hermjakob, USC Information Sciences Institute
+   Licensed under the MIT license (see utils/uroman/LICENSE.txt).
+
+   Vendored at utils/uroman/ so forced alignment works offline. The original
+   release tarballs that ship with upstream are NOT included.
+
+--------------------------------------------------------------------------------
+3) fastText language-identification model  lid.176.ftz
+   (https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz)
+   Copyright Facebook AI Research, licensed under CC-BY-SA 3.0.
+   NOT included in this repository — download it with scripts/download_models.sh.
+   If you redistribute the model, keep the CC-BY-SA 3.0 attribution.
+
+--------------------------------------------------------------------------------
+4) Google MMS forced-alignment model and Whisper weights are downloaded at
+   runtime into $HOME/.cache (torch / huggingface). They are not redistributed
+   by this repository and keep their own licenses.

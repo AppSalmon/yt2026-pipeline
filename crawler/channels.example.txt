@@ -1,0 +1,28 @@
+# ============================================================================
+# channels.example.txt — MẪU danh sách kênh cần crawl. Hãy COPY ra channels.txt
+# rồi thay bằng danh sách của bạn:
+#
+#     cp crawler/channels.example.txt crawler/channels.txt
+#     # rồi sửa crawler/channels.txt (file này đã nằm trong .gitignore)
+#
+# Format mỗi dòng: [tên kênh]<TAB>[handle hoặc channel id]
+#   - cột 2 nhận CẢ HAI dạng: `@handle` hoặc `channel/UCxxxxxxxx`
+#   - dòng trống và dòng bắt đầu bằng '#' bị bỏ qua
+#   - giữ nguyên cột 2 (đừng đổi @handle <-> channel/UCxxx): tên file archive
+#     chống trùng trong crawler/log/audios_* gắn với tên thư mục kênh
+#
+# Cách tự tìm kênh cho ngôn ngữ của bạn:
+#   python3 crawler/discover_channels.py \
+#       --keywords "<từ khoá 1>" "<từ khoá 2>" \
+#       --num-per-keyword 40 --dateafter 20260101 \
+#       --output crawler/candidates.tsv
+#   # -> duyệt tay candidates.tsv, dán kênh OK vào crawler/channels.txt
+#   # -> kiểm tra kênh còn sống + có video trong cửa sổ thời gian:
+#   ./crawler/check_channels.sh crawler/channels.txt
+# ============================================================================
+
+# --- 3 dòng mẫu (kênh công khai, chỉ để minh hoạ format) --------------------
+# VTV24	@VTV24
+# KENH14 SPECIAL	channel/UCKii76BlEdVwV1Lq-EJX_nw
+# Ví dụ kênh tiếng Anh	@example_handle
+

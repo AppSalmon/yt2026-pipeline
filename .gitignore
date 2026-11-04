@@ -1,0 +1,70 @@
+# ============================================================================
+# .gitignore — repo này chỉ chứa CODE + tài liệu.
+# Dữ liệu crawl (audio) và mọi thứ phái sinh nằm NGOÀI repo (xem config.env).
+# ============================================================================
+
+# ---------- SECRETS: tuyệt đối không commit ----------
+cookies.txt
+cookies/*.txt
+cookies/*.json
+!crawler/cookies/README.md
+*.token
+*.pem
+*.key
+.env
+.env.*
+config.local.env
+*.local.env
+
+# ---------- Dữ liệu crawl / derive (luôn ngoài repo) ----------
+data/
+download_from_youtube/
+dataset/
+output_trans/
+output_force_align/
+output_annotated/
+output_filter/
+output_segment_all/
+output_segment_codeswitch/
+*.wav
+*.webm
+*.m4a
+*.opus
+*.mp3
+*.info.json
+
+# ---------- Log & state máy cục bộ ----------
+*.log
+nohup*.log
+crawler/log/*
+!crawler/log/.gitkeep
+crawler/note
+*.stamp
+
+# ---------- Danh sách kênh ĐANG LÀM VIỆC (tự tạo từ file .example) ----------
+# crawler/channels.example.txt và crawler/langs/** thì ĐƯỢC commit.
+crawler/channels.txt
+crawler/channels_*.txt
+crawler/candidates*.tsv
+crawler/channels_candidates*.tsv
+!crawler/channels.example.txt
+
+# ---------- Model nhị phân (tải bằng scripts/download_models.sh) ----------
+models/*
+!models/.gitkeep
+!models/README.md
+
+# ---------- Build / OS ----------
+__pycache__/
+*.py[cod]
+*.tmp
+*.bak
+*.bak_*
+*.orig
+*.rej
+.DS_Store
+.idea/
+.vscode/
+
+# ---------- Upstream project (clone riêng, không vendor vào repo) ----------
+/GigaSpeech2/
